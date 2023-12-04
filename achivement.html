@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallary</title>
+    <link rel="stylesheet" href="achivement.css">
+</head>
+<body>
+    <header>
+        <a href="" class="name"><span>MS</span>Sanjith</a>
+        <ul class="navbar">
+            <li><a href="intro.html" >Home</a></li>
+            <li><a href="resume.html" >Resume</a></li>
+            <li><a href="achivement.html" class="active">Achivements</a></li>
+            <li><a href="gallery.html">Gallary</a></li>
+            <li><a href="social.html">SocialMedia</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <h1>My achivements</h1>     
+        <div class="gallary">
+            <div class="image"><img src="25.jpg" alt=""></div>
+            <div class="image"><img src="11.jpg" alt=""></div>
+            <div class="image"><img src="12.jpg" alt=""></div>
+            <div class="image"><img src="16.jpg" alt=""></div>
+            <div class="image"><img src="17.jpg" alt=""></div>
+            <div class="image"><img src="18.png" alt=""></div>
+            <div class="image"><img src="19.png" alt=""></div>
+            <div class="image"><img src="20.png" alt=""></div>
+            <div class="image"><img src="21.png" alt=""></div>
+            <div class="image"><img src="22.png" alt=""></div>
+            <div class="image"><img src="23.png" alt=""></div>
+            <div class="image"><img src="24.png" alt=""></div>
+            <div class="image"><img src="13.jpg" alt=""></div>
+            <div class="image"><img src="14.jpg" alt=""></div>
+            <div class="image"><img src="15.jpg" alt=""></div>
+        </div>
+        <div class="popup">
+            <span>&times;</span>
+            <img src="11.jpg" >
+        </div>      
+    </div>
+    <script>
+        document.querySelectorAll('.gallary img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup').style.display ='block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display ='none'; 
+        }
+    </script>
+</body>
+</html>

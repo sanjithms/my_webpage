@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallary</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <a href="" class="name"><span>MS</span>Sanjith</a>
+        <ul class="navbar">
+            <li><a href="intro.html" >Home</a></li>
+            <li><a href="resume.html" >Resume</a></li>
+            <li><a href="achivements.html">Achivements</a></li>
+            <li><a href="gallary.html" class="active">Gallary</a></li>
+            <li><a href="social.html">SocialMedia</a></li>
+
+        </ul>
+    </header>
+    <div class="container">
+        <h1>My Gallary</h1>     
+        <div class="gallary">
+            <div class="image"><img src="3.jpg" alt=""></div>
+            <div class="image"><img src="06.jpg" alt=""></div>
+        </div>
+        <div class="popup">
+            <span>&times;</span>
+            <img src="11.jpg" >
+        </div>      
+    </div>
+    <script>
+        document.querySelectorAll('.gallary img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup').style.display ='block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display ='none'; 
+        }
+    </script>
+</body>
+</html>
